@@ -6,14 +6,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        Angular CLI: 8.0.3
-    
     steps:
     - uses: actions/checkout@v1
     - name: test build
       run: |
         npm install
-        npm install @angular/cli
-        ng build
+        npm run build
